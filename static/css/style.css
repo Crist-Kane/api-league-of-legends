@@ -2,3 +2,36 @@ body{
     background-color: gold;
     display: flex;
 }
+
+#input-search{
+    margin: auto;
+    padding: 15px;
+    border-radius: 40px;
+    border: 3px solid rgb(0, 0, 0);
+    outline: none;
+    width: 30px;
+    padding-left: 20px;
+    background-color: rgb(253, 253, 253);
+    transition: width 0.7s;
+    -moz-transition: width 0.7s;
+    cursor: pointer;
+    overflow: hidden;
+    display: block;
+}
+#input-search:focus{
+    width: 200px;
+}
+#input-search:hover input{
+    width: 200px;
+}
+
+.character-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.character-profile{
+    width: 10rem;
+    height: 16rem;
+}
