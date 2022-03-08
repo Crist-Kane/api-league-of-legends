@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="static/css/style.css">
-    <script src="static/js/search.js"></script>
+    <link rel="stylesheet" href="../static/css/style.css">
+    <script src="../static/js/search.js"></script>
     <title>Document</title>
 </head>
 <body>
@@ -18,9 +18,10 @@
         {{range .Data}}
         <div class="character-profile {{.Image.Full}}">
             <p><!---name = --->{{.Name}}</p>
-            <img src="http://ddragon.leagueoflegends.com/cdn/9.3.1/img/champion/{{.Image.Full}}">
+            <a href="/lore/{{.Name}}"><img src="http://ddragon.leagueoflegends.com/cdn/9.3.1/img/champion/{{.Image.Full}}"> </a>
+
             <p><!---Title =--->{{.Title}}</p>
-            <p><!---hp = --->{{.Stats.Hp}}</p>
+            <!---<p>----hp = ---{{.Stats.Hp}}</p>--->
         </div>
 
         

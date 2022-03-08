@@ -1,0 +1,13 @@
+body {
+    background-color: rgb(13, 8, 85);
+
+}
+.character-container{
+    border: solid 3px;
+    background-image: url('background2.png');
+    height: 600px;
+    width: 800px;
+}
+span{
+    color: gold;
+}
