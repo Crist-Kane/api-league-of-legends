@@ -3,11 +3,18 @@ body {
 
 }
 .character-container{
-    border: solid 3px;
+    border: solid gold 3px;
     background-image: url('background2.png');
-    height: 600px;
-    width: 800px;
+    height: 500px;
+    width: 600px;
 }
 span{
     color: gold;
+}
+.color>p{
+color: azure;
+font-family: lu ;
+}
+.character-profile {
+    margin: 22px 33px;
 }

@@ -10,11 +10,6 @@
     <title>Document</title>
 </head>
 <body>
-    <div>
-        <form>
-            <input type="search" onkeyup="search()" id="input-search" placeholder="Recherche...">
-        </form>
-    </div>
     <div class="character-cadre">
         <div class="character-container">
             <div class="character-profile {{.Image.Full}}">
@@ -22,7 +17,10 @@
                 <a href="/lore/{{.Name}}">
                     <img src="http://ddragon.leagueoflegends.com/cdn/9.3.1/img/champion/{{.Image.Full}}"> 
                 </a>
-                <p><span>{{.Title}}</span></p>
+                <p><span>{{.Title}}</span></p> 
+            </div>
+            <div class="color">
+                <p>{{.Blurb}}</p>
             </div>
         </div>
 
