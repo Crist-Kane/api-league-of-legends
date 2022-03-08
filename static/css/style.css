@@ -36,6 +36,10 @@ body{
     height: 16rem;
 }
 
+.classe {
+    border-radius: 15px;
+}
+
 .none{
     display: none;
 }

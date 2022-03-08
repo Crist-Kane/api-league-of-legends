@@ -11,8 +11,33 @@
 <body>
     <div>
         <form>
-            <input type="search" onkeyup="search()" id="input-search" placeholder="Recherche...">
+            <input type="search" onkeyup="search()" id="input-search" placeholder="Recherche...">​
         </form>
+        <div>
+
+            <input type="checkbox" id="combattant" name="classe" value="combattant"​checked>​
+            <label for="combattant">Combattant</label>​
+        </div>
+        <div>
+            <input type="checkbox" id="assassin" name="classe" value="assassin">​
+            <label for="assassin">Assassin</label>​
+        </div>
+        <div>
+            <input type="checkbox" id="tank" name="classe" value="tank">​
+            <label for="tank">Tank</label>​
+        </div>
+        <div>
+            <input type="checkbox" id="tireur" name="classe" value="tireur">​
+            <label for="tireur">Tireur</label>​
+        </div>
+        <div>
+            <input type="checkbox" id="mage" name="classe" value="mage">​
+            <label for="mage">Mage</label>​
+        </div>
+        <div>
+            <input type="checkbox" id="support" name="classe" value="support">​
+            <label for="support">Support</label>​
+        </div>
     </div>
     <div class="character-container">
         {{range .Data}}
