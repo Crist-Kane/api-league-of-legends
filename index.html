@@ -16,15 +16,42 @@
     </div>
     <div class="character-container">
         {{range .Data}}
-        <div class="character-profile {{.Image.Full}}">
-            <p><!---name = --->{{.Name}}</p>
+        <div class="info {{.Image.Full}}">
             <img src="http://ddragon.leagueoflegends.com/cdn/9.3.1/img/champion/{{.Image.Full}}">
+            <p><!---name = --->{{.Name}}</p>
             <p><!---Title =--->{{.Title}}</p>
-            <p><!---hp = --->{{.Stats.Hp}}</p>
+        </div>
+        <div class="hero none">
+            <tr>
+                <td>{{.Info.Attack}}</td>
+                <td>{{.Info.Defense}}</td>
+                <td>{{.Info.Magic}}</td>
+                <td>{{.Info.Difficulty}}</td>
+            </tr>
         </div>
 
         
         {{end}}
     </div>
 </body>
+<script>
+    let divAction = document.getElementsByClassName('info');
+
+Array.from(divAction).forEach(div => {
+    div.addEventListener('click', e => {
+        solution(e);
+    })
+})
+
+function solution(event){
+    let clickedDiv = event.target.closest('.info');
+    let parent = clickedDiv.nextSibling.nextElementSibling;
+    if (parent.classList.contains("none")){
+        parent.classList.remove('none');
+    }
+    else{
+        parent.classList.add('none');
+    }
+}
+</script>
 </html>

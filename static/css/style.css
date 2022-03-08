@@ -35,3 +35,12 @@ body{
     width: 10rem;
     height: 16rem;
 }
+
+.none{
+    display: none;
+}
+.info{
+    justify-content: space-between;
+    width: 10rem;
+    height: 16rem;
+}
