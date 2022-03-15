@@ -64,8 +64,10 @@ type Data struct {
 }
 
 func main() {
-
-	url := "http://ddragon.leagueoflegends.com/cdn/9.3.1/data/fr_FR/champion.json"
+	//http://ddragon.leagueoflegends.com/cdn/9.3.1/data/img/champion.png
+	url := "http://ddragon.leagueoflegends.com/cdn/12.5.1/data/fr_FR/champion.json"
+	//http://ddragon.leagueoflegends.com/cdn/12.5.1/data/champion.json
+	//https://ddragon.leagueoflegends.com/realms/na.json
 
 	httpClient := http.Client{
 		Timeout: time.Second * 8, // define timeout

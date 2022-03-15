@@ -2,6 +2,9 @@ body{
     background-color: gold;
     display: flex;
 }
+.none{
+    display: none;
+}
 
 #input-search{
     margin: auto;
@@ -33,5 +36,17 @@ body{
 
 .character-profile{
     width: 10rem;
-    height: 16rem;
+    height: fit-content;
+}
+.busqueda{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;;
+}
+.button-container{
+    display: flex;
+    justify-content:space-around;
+    /*text-align: center;*/
+    padding: 20px;
 }
