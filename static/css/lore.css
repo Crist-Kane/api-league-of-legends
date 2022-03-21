@@ -17,6 +17,13 @@ body {
 span{
     color: gold;
 }
+.character-stats{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+
+}
 .color>p{
 color: azure;
 font-family:'Times New Roman', Times, serif ;
