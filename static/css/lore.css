@@ -19,10 +19,10 @@ span{
 }
 .container-buttons{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
+    justify-content: center;
     flex-wrap: wrap;
-
 }
 .color>p{
 color: azure;
