@@ -26,11 +26,11 @@
             <div class="character-container" id="test">
                 {{range .Data}}
                 <div class="character-profile {{.Name}} {{range .Tags -}} {{.}} {{end}}">
-                    <p><!---name = --->{{.Name}}</p>
-                    <a href="/lore/{{.Name}}"><img src="http://ddragon.leagueoflegends.com/cdn/12.5.1/img/champion/{{.Image.Full}}"> </a>
-                    <p>bonjour</p>
+                    <h3><!---name = --->{{.Name}}</h3>
+                    <a href="/lore/{{.Name}}">
+                        <img src="http://ddragon.leagueoflegends.com/cdn/12.5.1/img/champion/{{.Image.Full}}"> 
+                    </a>
                     <p><!---Title =--->{{.Title}}</p>
-                    {{.Tags}}
                 </div>
                 {{end}}
 

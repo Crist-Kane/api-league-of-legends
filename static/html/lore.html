@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--<link rel="stylesheet" href="../static/css/style.css"> tu peux pas avoir deux css lie a une seul html--->
     <link rel="stylesheet" href="../static/css/lore.css">
-    <script src="static/js/search.js"></script>
+    <script src="../static/js/search.js"></script>
     <title>Document</title>
 </head>
 <body>
@@ -18,6 +18,13 @@
                     <img src="http://ddragon.leagueoflegends.com/cdn/12.5.1/img/champion/{{.Image.Full}}"> 
                 </a>
                 <p><span>{{.Title}}</span></p> 
+            </div>
+            <div class="container-buttons">
+                <p>{{range .Data}}<p>
+                <div class="character-attack {{.attack}}">
+                    {{.Name}}
+                    <input type="button" value="Assassin" id="Assassin" onclick = Attack() >
+                </div>
             </div>
             <div class="color">
                 <p>{{.Blurb}}</p>
