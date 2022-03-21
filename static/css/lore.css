@@ -21,10 +21,23 @@ span{
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    padding: 20px;
+    justify-content: flex-end;
+    padding: 0 15%;
 }
+.Attack{
+    margin: 20px;
+}
+.Defense{
+    margin: 20px;
+}
+.Stats{
+    margin: 20px;
+}
+.Difficulty{
+    margin: 20px;
+}
+
+
 .color>p{
 color: azure;
 font-family:'Times New Roman', Times, serif ;
