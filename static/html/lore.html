@@ -22,6 +22,12 @@
             <div class="color">
                 <p>{{.Blurb}}</p>
             </div>
-        </div>
-
+        </div>  
+        <div class="container-buttons">
+            <input type="button" value="Attack" >
+            <p>{{range .Data}}<p>
+            <div class="character-attack {{.Attack}}">
+                {{.Attack}}
+            </div>
+            </div>
     </div>
