@@ -10,6 +10,12 @@
     <title>Document</title>
 </head>
 <body>
+        <div class="container-buttons">
+            <input type="button" value="Attack" >
+            <div class="character-stats">
+                {{.Attack}}
+            </div>
+        </div>
     <div class="character-cadre">
         <div class="character-container">
             <div class="character-profile {{.Image.Full}}">
@@ -23,10 +29,4 @@
                 <p>{{.Blurb}}</p>
             </div>
         </div>  
-        <div class="container-buttons">
-            <input type="button" value="Attack" >
-            <div class="character-stats">
-                {{.Attack}}
-            </div>
-            </div>
     </div>

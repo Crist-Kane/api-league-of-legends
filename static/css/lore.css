@@ -20,8 +20,9 @@ span{
 .container-buttons{
     display: flex;
     flex-direction: column;
-    align-items: left;
+    align-items: center;
     flex-wrap: wrap;
+    margin: 1220px 0px ;
 
 }
 .color>p{
