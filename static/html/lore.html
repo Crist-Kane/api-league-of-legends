@@ -10,20 +10,26 @@
     <title>Document</title>
 </head>
 <body>
-        <div class="container-buttons">
-            <input type="button" value="Stats" >
+    <div class="character-interieur">
+            <div class="container-buttons">
+                <input type="button" value="Attack" >
+                <input type="button" value="defence" >
+                <input type="button" value="Stats" >
+
+            </div>
+        <div class="character-cadre">
+            <div class="character-container">
+                <div class="character-profile {{.Image.Full}}">
+                    <p><!---name = ---><span>{{.Name}}</span></p>
+                    <a href="/lore/{{.Name}}">
+                        <img src="http://ddragon.leagueoflegends.com/cdn/12.5.1/img/champion/{{.Image.Full}}"> 
+                    </a>
+                    <p><span>{{.Title}}</span></p> 
+                </div>
+                <p>{{.Info.Attack}}</p>
+                <div class="color">
+                    <p>{{.Blurb}}</p>
+                </div>
+            </div>  
         </div>
-    <div class="character-cadre">
-        <div class="character-container">
-            <div class="character-profile {{.Image.Full}}">
-                <p><!---name = ---><span>{{.Name}}</span></p>
-                <a href="/lore/{{.Name}}">
-                    <img src="http://ddragon.leagueoflegends.com/cdn/12.5.1/img/champion/{{.Image.Full}}"> 
-                </a>
-                <p><span>{{.Title}}</span></p> 
-            </div>
-            <div class="color">
-                <p>{{.Blurb}}</p>
-            </div>
-        </div>  
     </div>
