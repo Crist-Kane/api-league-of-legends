@@ -24,20 +24,6 @@ span{
     justify-content: flex-end;
     padding: 0 15%;
 }
-.Attack{
-    margin: 20px;
-}
-.Defense{
-    margin: 20px;
-}
-.Stats{
-    margin: 20px;
-}
-.Difficulty{
-    margin: 20px;
-}
-
-
 .color>p{
 color: azure;
 font-family:'Times New Roman', Times, serif ;
@@ -50,4 +36,30 @@ font-size: 30px;
 img {
     width: 45vh;
     height: 45vh;
+}
+.info{
+    position: relative;
+    right: 750px;
+    bottom: 750px;
+    text-align: right;
+    color: white;
+    font-size: 20px;
+}
+
+.stat{
+    text-align: right;
+    color: white;
+    position: relative;
+    right: 450px;
+    bottom: 987px;
+    font-size: 20px;
+}
+
+.level{
+    text-align: right;
+    color: white;
+    position: relative;
+    right: 150px;
+    bottom: 1553px;
+    font-size: 20px;
 }
