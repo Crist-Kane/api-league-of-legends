@@ -40,14 +40,28 @@ img {
 }
 
 .info{
+    position: relative;
+    right: 750px;
+    bottom: 750px;
     text-align: right;
     color: white;
+    font-size: 20px;
 }
 
 .stat{
+    text-align: right;
     color: white;
+    position: relative;
+    right: 450px;
+    bottom: 960px;
+    font-size: 20px;
 }
 
 .level{
+    text-align: right;
     color: white;
+    position: relative;
+    right: 150px;
+    bottom: 1480px;
+    font-size: 20px;
 }
