@@ -25,7 +25,41 @@
             </div>  
         </div>
         <div class="info">
-            <p>{{Info.Attack}}</p>
+            <p>Info</p>
+            <p>Attaque : {{ .Info.Attack }}</p>
+            <p>Défense : {{ .Info.Defense}}</p>
+            <p>Magie : {{ .Info.Magic}}</p>
+            <p>Difficulté : {{ .Info.Difficulty}}</p>
+        </div>
+        <div class="stat">
+            <p>Statistique</p>
+            <p>PV : {{ .Stats.Hp}}</p>
+            <p>PM : {{ .Stats.Mp}}</p>
+            <p>Vitesse de déplacement : {{ .Stats.Movespeed}}</p>
+            <p>Défence physique : {{ .Stats.Armor}}</p>
+            <p>Défence magie : {{ .Stats.Spellblock }}</p>
+            <p>Portée d'attaque : {{ .Stats.Attackrange}}</p>
+            <p>Régénération de PV (par s) : {{ .Stats.Hpregen}}</p>
+            <p>Régénération de PM (par s) : {{ .Stats.Mpregen}}</p>
+            <p>Taux de critique (en %) : {{ .Stats.Crit}}</p>
+            <p>Dégat critique (en %) : {{ .Stats.Attackdamage}}</p>
+            <p>Vitesse d'attaque : {{ .Stats.Attackspeed}}</p>
+        </div>
+        <br>
+        <br>
+        <div class="level">
+            <p>Bonus statistique par level</p>
+            <p>PV : {{ .Stats.Hpperlevel}}</p>
+            <p>PM : {{ .Stats.Mpperlevel}}</p>
+            <br>
+            <p>Défence physique : {{ .Stats.Armorperlevel}}</p>
+            <p>Défence magie : {{ .Stats.Spellblockperlevel}}</p>
+            <br>
+            <p>Régénération de PV (par s) : {{ .Stats.Hpregenperlevel}}</p>
+            <p>Régénération de PM (par s) : {{ .Stats.Mpregenperlevel}}</p>
+            <p>Taux de critique (en %) : {{ .Stats.Critperlevel}}</p>
+            <p>Dégat critique (en %) : {{ .Stats.Attackdamageperlevel}}</p>
+            <p>Vitesse d'attaque : {{ .Stats.Attackspeedperlevel}}</p>
         </div>
     </body>
 </html>

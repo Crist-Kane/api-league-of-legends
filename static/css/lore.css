@@ -24,19 +24,6 @@ span{
     justify-content: flex-end;
     padding: 0 15%;
 }
-.Attack{
-    margin: 20px;
-}
-.Defense{
-    margin: 20px;
-}
-.Stats{
-    margin: 20px;
-}
-.Difficulty{
-    margin: 20px;
-}
-
 
 .color>p{
 color: azure;
@@ -50,4 +37,17 @@ font-size: 30px;
 img {
     width: 45vh;
     height: 45vh;
+}
+
+.info{
+    text-align: right;
+    color: white;
+}
+
+.stat{
+    color: white;
+}
+
+.level{
+    color: white;
 }
