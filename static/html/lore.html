@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--<link rel="stylesheet" href="../static/css/style.css"> tu peux pas avoir deux css lie a une seul html--->
+        <link rel="stylesheet" href="../static/css/lore.css">
+        <script src="../static/js/search.js"></script>
+        <title>Document</title>
+    </head>
+    <body style="background-image: url(http://ddragon.leagueoflegends.com/cdn/12.5.1/img/champion/{{.Image.Full}})">
+        <div class="character-cadre">
+            <div class="character-container">
+                <div class="character-profile {{.Image.Full}}">
+                    <p><!---name = ---><span>{{.Name}}</span></p>
+                    <a href="/lore/{{.Name}}">
+                        <img src="http://ddragon.leagueoflegends.com/cdn/12.5.1/img/champion/{{.Image.Full}}"> 
+                    </a>
+                    <p><span>{{.Title}}</span></p> 
+                </div>
+                <div class="color">
+                    <p>{{.Blurb}}</p>
+                </div>
+            </div>  
+        </div>
+        <div class="info">
+            <p>{{Info.Attack}}</p>
+        </div>
+    </body>
+</html>

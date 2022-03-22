@@ -6,6 +6,7 @@ import (
 	"io/ioutil"
 	"log"
 	"net/http"
+	"strings"
 	"time"
 )
 
@@ -63,15 +64,17 @@ type Data struct {
 }
 
 func main() {
-
-	url := "http://ddragon.leagueoflegends.com/cdn/9.3.1/data/fr_FR/champion.json"
+	//http://ddragon.leagueoflegends.com/cdn/9.3.1/data/img/champion.png
+	url := "http://ddragon.leagueoflegends.com/cdn/12.5.1/data/fr_FR/champion.json"
+	//http://ddragon.leagueoflegends.com/cdn/12.5.1/data/champion.json
+	//https://ddragon.leagueoflegends.com/realms/na.json
 
 	httpClient := http.Client{
 		Timeout: time.Second * 8, // define timeout
 	}
 
 	//create template file
-	tmpl, err := template.ParseFiles("index.html")
+	tmpl, err := template.ParseFiles("static/html/index.html")
 	if err != nil {
 		log.Fatalln(err)
 	}
@@ -104,14 +107,21 @@ func main() {
 		log.Fatal(jsonErr)
 	}
 
+	http.Handle("/static/", http.StripPrefix("/static/", http.FileServer(http.Dir("static"))))
+
 	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
 		//imageServer := http.FileServer(http.Dir("images"))
 		//http.Handle("/images/", http.StripPrefix("/images/", imageServer))
-		tmpl = template.Must(template.ParseFiles("index.html"))
+		tmpl = template.Must(template.ParseFiles("static/html/index.html"))
 		tmpl.Execute(w, response)
 	})
-
-	http.Handle("/static/", http.StripPrefix("/static/", http.FileServer(http.Dir("static"))))
+	http.HandleFunc("/lore/", func(w http.ResponseWriter, r *http.Request) {
+		id := strings.ReplaceAll(r.URL.Path, "/lore/", "")
+		//imageServer := http.FileServer(http.Dir("images"))
+		//http.Handle("/images/", http.StripPrefix("/images/", imageServer))
+		tmpl = template.Must(template.ParseFiles("static/html/lore.html"))
+		tmpl.Execute(w, response.Data[id])
+	})
 
 	http.ListenAndServe(":8080", nil)
 }

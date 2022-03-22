@@ -1,6 +1,10 @@
 body{
-    background-color: gold;
+    background-image: url('lol.png');
     display: flex;
+    justify-content: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 #input-search{
@@ -28,23 +32,40 @@ body{
 .character-container{
     display: flex;
     flex-direction: row;
+    align-items: center;
+    justify-content: center;
     flex-wrap: wrap;
 }
 
 .character-profile{
     width: 10rem;
-    height: 16rem;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.character-profile>h3{
+    color: gold;
+
+}
+.character-profile p{
+    color: gold;
+}
+.busqueda{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.button-container{
+    display: flex;
+    padding: 20px;
 }
 
-.classe {
-    border-radius: 15px;
+#Assassin, #Combattants,#Magiciens,#Tireur,#Support,#Tank{
+    margin:  0 2%;
 }
 
 .none{
     display: none;
-}
-.info{
-    justify-content: space-between;
-    width: 10rem;
-    height: 16rem;
 }
