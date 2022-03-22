@@ -10,7 +10,7 @@ body{
 #input-search{
     margin: auto;
     padding: 15px;
-    border-radius: 40px;
+    border-radius: 30px;
     border: 3px solid rgb(0, 0, 0);
     outline: none;
     width: 30px;
@@ -64,8 +64,26 @@ body{
 
 #Assassin, #Combattants,#Magiciens,#Tireur,#Support,#Tank{
     margin:  0 2%;
+    border: 1px solid rgb(255, 255, 255);
+    background-color: gold;
+    width: 25vh;
+    height: 25px;
+    border-radius: 10%;
+    margin: 1vh;
 }
 
 .none{
     display: none;
+}
+.big-mom{
+    width: auto;
+    height: fit-content;
+    min-height: 1200px;
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    flex-wrap: wrap;
+    background-color: rgba(180, 129, 34, 0.205);
+    justify-content: center;
+    background-attachment: fixed;
 }
