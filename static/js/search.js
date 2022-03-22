@@ -7,7 +7,7 @@ function search(){
         if (!item.innerHTML.toLowerCase().includes(input)) {
             item.style.display="none";
         } else {
-            item.style.display="list-item";         
+            item.style.display="block";         
         }
     }
 }

@@ -7,13 +7,13 @@
         <!--<link rel="stylesheet" href="../static/css/style.css"> tu peux pas avoir deux css lie a une seul html--->
         <link rel="stylesheet" href="../static/css/lore.css">
         <script src="../static/js/search.js"></script>
-        <title>Document</title>
+        <title>Server api</title>
     </head>
     <body>
         <div class="character-cadre">
             <div class="character-container">
                 <div class="character-profile {{.Image.Full}}">
-                    <h2><!---name = ---><span>{{.Name}}</span></h2>
+                    <h1><span>{{.Name}}</span></h1>
                     <a href="/lore/{{.Name}}">
                         <img src="http://ddragon.leagueoflegends.com/cdn/12.5.1/img/champion/{{.Image.Full}}"> 
                     </a>
@@ -24,40 +24,42 @@
                 </div>
             </div>  
         </div>
-        <div class="info">
-            <p>Info</p>
-            <p>Attaque : {{ .Info.Attack }}</p>
-            <p>Défense : {{ .Info.Defense}}</p>
-            <p>Magie : {{ .Info.Magic}}</p>
-            <p>Difficulté : {{ .Info.Difficulty}}</p>
-        </div>
-        <div class="stat">
-            <p>Statistique</p>
-            <p>PV : {{ .Stats.Hp}}</p>
-            <p>PM : {{ .Stats.Mp}}</p>
-            <p>Vitesse de déplacement : {{ .Stats.Movespeed}}</p>
-            <p>Défence physique : {{ .Stats.Armor}}</p>
-            <p>Défence magie : {{ .Stats.Spellblock }}</p>
-            <p>Portée d'attaque : {{ .Stats.Attackrange}}</p>
-            <p>Régénération de PV (par s) : {{ .Stats.Hpregen}}</p>
-            <p>Régénération de PM (par s) : {{ .Stats.Mpregen}}</p>
-            <p>Taux de critique (en %) : {{ .Stats.Crit}}</p>
-            <p>Dégat critique (en %) : {{ .Stats.Attackdamage}}</p>
-            <p>Vitesse d'attaque : {{ .Stats.Attackspeed}}</p>
-        </div>
-        <div class="level">
-            <p>Bonus statistique par level</p>
-            <p>PV : {{ .Stats.Hpperlevel}}</p>
-            <p>PM : {{ .Stats.Mpperlevel}}</p>
-            <br>
-            <p>Défence physique : {{ .Stats.Armorperlevel}}</p>
-            <p>Défence magie : {{ .Stats.Spellblockperlevel}}</p>
-            <br>
-            <p>Régénération de PV (par s) : {{ .Stats.Hpregenperlevel}}</p>
-            <p>Régénération de PM (par s) : {{ .Stats.Mpregenperlevel}}</p>
-            <p>Taux de critique (en %) : {{ .Stats.Critperlevel}}</p>
-            <p>Dégat critique (en %) : {{ .Stats.Attackdamageperlevel}}</p>
-            <p>Vitesse d'attaque : {{ .Stats.Attackspeedperlevel}}</p>
+        <div class="character-info">
+            <div class="info">
+                <h4>Info</h4>
+                <h4>Attaque : {{ .Info.Attack }}</h4>
+                <h4>Défense : {{ .Info.Defense}}</h4>
+                <h4>Magie : {{ .Info.Magic}}</h4>
+                <h4>Difficulté : {{ .Info.Difficulty}}</h4>
+            </div>
+            <div class="stat">
+                <h4>Statistique</h4>
+                <h4>PV : {{ .Stats.Hp}}</h4>
+                <h4>PM : {{ .Stats.Mp}}</h4>
+                <h4>Vitesse de déplacement : {{ .Stats.Movespeed}}</h4>
+                <h4>Défence physique : {{ .Stats.Armor}}</h4>
+                <h4>Défence magie : {{ .Stats.Spellblock }}</h4>
+                <h4>Portée d'attaque : {{ .Stats.Attackrange}}</h4>
+                <h4>Régénération de PV (par s) : {{ .Stats.Hpregen}}</h4>
+                <h4>Régénération de PM (par s) : {{ .Stats.Mpregen}}</h4>
+                <h4>Taux de critique (en %) : {{ .Stats.Crit}}</h4>
+                <h4>Dégat critique (en %) : {{ .Stats.Attackdamage}}</h4>
+                <h4>Vitesse d'attaque : {{ .Stats.Attackspeed}}</h4>
+            </div>
+            <div class="level">
+                <h4>Bonus statistique par level</h4>
+                <h4>PV : {{ .Stats.Hpperlevel}}</h4>
+                <h4>PM : {{ .Stats.Mpperlevel}}</h4>
+                <br>
+                <h4>Défence physique : {{ .Stats.Armorperlevel}}</h4>
+                <h4>Défence magie : {{ .Stats.Spellblockperlevel}}</h4>
+                <br>
+                <h4>Régénération de PV (par s) : {{ .Stats.Hpregenperlevel}}</h4>
+                <h4>Régénération de PM (par s) : {{ .Stats.Mpregenperlevel}}</h4>
+                <h4>Taux de critique (en %) : {{ .Stats.Critperlevel}}</h4>
+                <h4>Dégat critique (en %) : {{ .Stats.Attackdamageperlevel}}</h4>
+                <h4>Vitesse d'attaque : {{ .Stats.Attackspeedperlevel}}</h4>
+            </div>
         </div>
     </body>
 </html>

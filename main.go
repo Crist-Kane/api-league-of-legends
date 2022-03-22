@@ -121,8 +121,7 @@ func main() {
 		//imageServer := http.FileServer(http.Dir("images"))
 		//http.Handle("/images/", http.StripPrefix("/images/", imageServer))
 		tmpl = template.Must(template.ParseFiles("static/html/lore.html"))
-		fmt.Println(response.Data[id])
-		tmpl.Execute(w, response.Data[id])
+		tmpl.Execute(w, response.Data[])
 	})
 
 	http.ListenAndServe(":8080", nil)

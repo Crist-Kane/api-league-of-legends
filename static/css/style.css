@@ -41,6 +41,7 @@ body{
  img.kasos  {
     width: 20%;
     margin: auto auto 0px auto;
+    display: block;
 }
 
 .character-profile{
@@ -49,13 +50,15 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 0.8rem;
 }
-.character-profile>h3{
-    color: gold;
-
+.character-profile img{
+    width: 19vh;
+    height: 19vh;
 }
-.character-profile p{
+.character-profile>h3, h4{
     color: gold;
+    text-align: center;
 }
 .busqueda{
     display: flex;
@@ -91,7 +94,7 @@ body{
     flex-direction: row;
     overflow: hidden;
     flex-wrap: wrap;
-    background-color: rgba(180, 129, 34, 0.205);
+    background-color: rgba(160, 115, 33, 0.205);
     justify-content: center;
     background-attachment: fixed;
 }

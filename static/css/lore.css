@@ -3,6 +3,7 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
+    display: flex;
 
 }
 .character-container{
@@ -17,17 +18,11 @@ body {
 span{
     color: gold;
 }
-.container-buttons{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-end;
-    padding: 0 15%;
-}
 .color>p{
 color: azure;
 font-family:'Times New Roman', Times, serif ;
-font-size: 30px;
+font-size:30px;
+padding: 3%;
 }
 .character-profile {
     margin: 22px 33px;
@@ -38,28 +33,27 @@ img {
     height: 45vh;
 }
 .info{
-    position: relative;
-    right: 750px;
-    bottom: 750px;
-    text-align: right;
-    color: white;
-    font-size: 20px;
+    margin-right: 3.4rem;
 }
 
 .stat{
-    text-align: right;
-    color: white;
-    position: relative;
-    right: 450px;
-    bottom: 987px;
-    font-size: 20px;
+    flex-direction: row-reverse;
+    margin-right: 2.4rem;
 }
 
 .level{
-    text-align: right;
+    margin-right: 1.4rem;
+}
+
+.info, .stat, .level {
+    text-align: left;
     color: white;
-    position: relative;
-    right: 150px;
-    bottom: 1553px;
     font-size: 20px;
+}
+.character-info{
+    display: flex;
+    flex-direction:row;
+    /*justify-content: space-between;*/
+    justify-content: flex-end;
+    margin-left: 25px;
 }
