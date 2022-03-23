@@ -63,3 +63,8 @@ img {
     bottom: 1510px;
     font-size: 20px;
 }
+.all{
+    height: 115vh;
+    background-color: rgba(0, 0, 0, 0.445);
+    overflow: hidden;
+}

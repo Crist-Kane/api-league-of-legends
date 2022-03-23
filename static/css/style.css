@@ -38,11 +38,10 @@ body{
     justify-content: center;
     flex-wrap: wrap;
 }
- img.kasos  {
+ .kasos img {  
     width: 20%;
     margin: auto auto 0px auto;
 }
-
 .character-profile{
     width: 10rem;
     height: fit-content;
