@@ -64,6 +64,8 @@ type Data struct {
 	} `json:"data"`
 }
 
+const port = "8776"
+
 func main() {
 	url := "http://ddragon.leagueoflegends.com/cdn/12.5.1/data/fr_FR/champion.json"
 
@@ -71,22 +73,18 @@ func main() {
 	http.Handle("/images/", http.StripPrefix("/images/", imageServer))
 
 	httpClient := http.Client{
-		Timeout: time.Second * 8, // define timeout
+		Timeout: time.Second * 8,
 	}
 
-	//create template file
 	tmpl, err := template.ParseFiles("static/html/index.html")
 	if err != nil {
 		log.Fatalln(err)
 	}
 
-	//create request
 	req, err := http.NewRequest(http.MethodGet, url, nil)
 	if err != nil {
 		log.Fatal(err)
 	}
-
-	//make api call
 	res, getErr := httpClient.Do(req)
 	if getErr != nil {
 		log.Fatal(getErr)
@@ -96,7 +94,6 @@ func main() {
 		defer res.Body.Close()
 	}
 
-	//parse response
 	body, readErr := ioutil.ReadAll(res.Body)
 	if readErr != nil {
 		log.Fatal(readErr)
@@ -109,46 +106,34 @@ func main() {
 	}
 
 	http.Handle("/static/", http.StripPrefix("/static/", http.FileServer(http.Dir("static"))))
-
-	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
-		//imageServer := http.FileServer(http.Dir("images"))
-		//http.Handle("/images/", http.StripPrefix("/images/", imageServer))
+	http.HandleFunc("/spawn", func(w http.ResponseWriter, r *http.Request) {
 		tmpl = template.Must(template.ParseFiles("static/html/index.html"))
+		tmpl.Execute(w, response)
+	})
+	http.HandleFunc("/home", func(w http.ResponseWriter, r *http.Request) {
+		tmpl = template.Must(template.ParseFiles("static/html/menu.html"))
+		button2 := r.FormValue("deuxieme")
+		if button2 == "Click pour entrer" {
+			http.Redirect(w, r, "http://localhost:"+port+"/spawn", 301)
+		}
 		tmpl.Execute(w, response)
 	})
 	http.HandleFunc("/lore/", func(w http.ResponseWriter, r *http.Request) {
 		id := strings.ReplaceAll(r.URL.Path, "/lore/", "")
-		//imageServer := http.FileServer(http.Dir("images"))
-		//http.Handle("/images/", http.StripPrefix("/images/", imageServer))
 		tmpl = template.Must(template.ParseFiles("static/html/lore.html"))
 		fmt.Println(response.Data[id])
 		tmpl.Execute(w, response.Data[id])
 	})
+	http.HandleFunc("/", Handle404)
 
-	http.ListenAndServe(":4441", nil)
+	http.ListenAndServe(":"+port, nil)
 }
 
 func Handle404(w http.ResponseWriter, r *http.Request) {
-	tmpl, _ := template.ParseFiles("static/html/index.html")
+	tmpl, _ := template.ParseFiles("static/html/error.html")
 	button := r.FormValue("Ici")
-	if button == "Home" {
-		http.Redirect(w, r, "lien de redirection", 301)
+	if button == "Allez vers le Site" {
+		http.Redirect(w, r, "http://localhost:"+port+"/home", 301)
 	}
 	tmpl.Execute(w, r)
 }
-
-// package main
-
-// import "net/http"
-
-// func handler(omega http.ResponseWriter, r *http.Request) {
-// 	omega.Header().Set("content-type", "application/json")
-// 	omega.Write([]byte(`sempiternum`))
-// }
-// func main() {
-// 	print("lancement serveur")
-// 	//le url apres le port c'est celui qui est entre guimes et on peut le modifier no importe quoi letre, chifre ou character speciel dans c'est cas "omega-lampda7XL9"
-// 	http.HandleFunc("/omega-lampda7XL9", handler)
-// 	// le port  de lancement de fichier c'est 8888 et o peut le change example: 2802 mais on peut just le change pour des chifres
-// 	http.ListenAndServe(":8888", nil)
-// }

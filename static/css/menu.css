@@ -103,3 +103,18 @@ body{
     font-size: 300%;
 }
 
+.exemple input{
+    display: flex;
+    margin-left: 40vw;
+    margin-top: 50vh;
+    font-size: 300%;
+    text-decoration: none;
+    background-color: transparent;
+    border: transparent;
+}
+
+input:hover{
+    color: gold;
+    cursor: pointer;
+}
+
