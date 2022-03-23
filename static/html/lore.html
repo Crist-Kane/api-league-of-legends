@@ -9,14 +9,15 @@
         <script src="../static/js/search.js"></script>
         <title>Document</title>
     </head>
+    <body>
         <div class="character-cadre">
             <div class="character-container">
                 <div class="character-profile {{.Image.Full}}">
-                    <p><!---name = ---><span>{{.Name}}</span></p>
+                    <h2><!---name = ---><span>{{.Name}}</span></h2>
                     <a href="/lore/{{.Name}}">
                         <img src="http://ddragon.leagueoflegends.com/cdn/12.5.1/img/champion/{{.Image.Full}}"> 
                     </a>
-                    <p><span>{{.Title}}</span></p> 
+                    <h2><span>{{.Title}}</span></h2> 
                 </div>
                 <div class="color">
                     <p>{{.Blurb}}</p>

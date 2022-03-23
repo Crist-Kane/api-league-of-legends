@@ -2,6 +2,7 @@ package main
 
 import (
 	"encoding/json"
+	"fmt"
 	"html/template"
 	"io/ioutil"
 	"log"
@@ -64,10 +65,10 @@ type Data struct {
 }
 
 func main() {
-	//http://ddragon.leagueoflegends.com/cdn/9.3.1/data/img/champion.png
 	url := "http://ddragon.leagueoflegends.com/cdn/12.5.1/data/fr_FR/champion.json"
-	//http://ddragon.leagueoflegends.com/cdn/12.5.1/data/champion.json
-	//https://ddragon.leagueoflegends.com/realms/na.json
+
+	imageServer := http.FileServer(http.Dir("images"))
+	http.Handle("/images/", http.StripPrefix("/images/", imageServer))
 
 	httpClient := http.Client{
 		Timeout: time.Second * 8, // define timeout
@@ -120,10 +121,20 @@ func main() {
 		//imageServer := http.FileServer(http.Dir("images"))
 		//http.Handle("/images/", http.StripPrefix("/images/", imageServer))
 		tmpl = template.Must(template.ParseFiles("static/html/lore.html"))
+		fmt.Println(response.Data[id])
 		tmpl.Execute(w, response.Data[id])
 	})
 
-	http.ListenAndServe(":8080", nil)
+	http.ListenAndServe(":4444", nil)
+}
+
+func Handle404(w http.ResponseWriter, r *http.Request) {
+	tmpl, _ := template.ParseFiles("static/html/index.html")
+	button := r.FormValue("Ici")
+	if button == "Home" {
+		http.Redirect(w, r, "lien de redirection", 301)
+	}
+	tmpl.Execute(w, r)
 }
 
 // package main

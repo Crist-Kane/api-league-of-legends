@@ -1,6 +1,6 @@
 body{
     background-image: url('lol.png');
-    display: flex;
+    display: block;
     justify-content: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -10,7 +10,7 @@ body{
 #input-search{
     margin: auto;
     padding: 15px;
-    border-radius: 40px;
+    border-radius: 30px;
     border: 3px solid rgb(0, 0, 0);
     outline: none;
     width: 30px;
@@ -21,6 +21,8 @@ body{
     cursor: pointer;
     overflow: hidden;
     display: block;
+    position: absolute;
+    left: 85%;
 }
 #input-search:focus{
     width: 200px;
@@ -35,6 +37,10 @@ body{
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
+}
+ img.kasos  {
+    width: 20%;
+    margin: auto auto 0px auto;
 }
 
 .character-profile{
@@ -54,18 +60,38 @@ body{
 .busqueda{
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: end;
     flex-wrap: wrap;
+    width: 100%;
 }
 .button-container{
     display: flex;
     padding: 20px;
+    align-self: center;
 }
 
 #Assassin, #Combattants,#Magiciens,#Tireur,#Support,#Tank{
     margin:  0 2%;
+    border: 1px solid rgb(255, 255, 255);
+    background-color: gold;
+    width: 6rem;
+    height: 25px;
+    border-radius: 5%;
+    margin: 1vh;
 }
 
 .none{
     display: none;
+}
+.big-mom{
+    width: auto;
+    height: fit-content;
+    min-height: 1200px;
+    display: block;
+    flex-direction: row;
+    overflow: hidden;
+    flex-wrap: wrap;
+    background-color: rgba(180, 129, 34, 0.205);
+    justify-content: center;
+    background-attachment: fixed;
 }

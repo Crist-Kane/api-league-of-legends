@@ -24,7 +24,6 @@ span{
     justify-content: flex-end;
     padding: 0 15%;
 }
-
 .color>p{
 color: azure;
 font-family:'Times New Roman', Times, serif ;
@@ -38,7 +37,6 @@ img {
     width: 45vh;
     height: 45vh;
 }
-
 .info{
     position: relative;
     right: 750px;
@@ -53,7 +51,7 @@ img {
     color: white;
     position: relative;
     right: 450px;
-    bottom: 960px;
+    bottom: 987px;
     font-size: 20px;
 }
 
@@ -62,6 +60,6 @@ img {
     color: white;
     position: relative;
     right: 150px;
-    bottom: 1480px;
+    bottom: 1510px;
     font-size: 20px;
 }
